@@ -7,10 +7,13 @@ function Connect(props) {
 
   const detectProvider = () => {
     let provider;
+    console.log(provider, "PROVIDER")
     if (window.ethereum) {
       provider = window.ethereum;
+      console.log(provider, "PROVIDER")
     } else if (window.web3) {
       provider = window.web3.currentProvider;
+      console.log(provider)
     } else {
       window.alert("No Ethereum browser detected! Check out Metamask");
     }
@@ -29,6 +32,7 @@ function Connect(props) {
       await provider.request({
         method: "eth_requestAccounts",
       });
+      console.log(provider, "IIII")
       setIsConnecting(false);
     }
     props.onConnect(provider);

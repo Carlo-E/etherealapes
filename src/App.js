@@ -12,6 +12,7 @@ function App() {
   const onConnect = async (provider) => {
     const web3 = new Web3(provider);
     const accounts = await web3.eth.getAccounts();
+    console.log(accounts)
     if (accounts.length === 0) {
       console.log("Please connect to MetaMask!");
     } else if (accounts[0] !== currentAccount) {
