@@ -16,7 +16,6 @@ function ScoreCard({ wallet, index, currentAccount}) {
           <div> {index + 1} </div>
           <div> {wallet[0]} </div> 
           <div> {wallet[1].toFixed()} </div>
-
         </div>
         
       )}
